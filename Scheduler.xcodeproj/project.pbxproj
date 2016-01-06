@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		CD7FCAE7165B0D97FAE8032D /* Pods_Scheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0CA5C9442DAAE447B1E08E /* Pods_Scheduler.framework */; };
 		F716E4AF1C3C0566005017BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E4AE1C3C0566005017BC /* AppDelegate.swift */; };
-		F716E4B11C3C0566005017BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E4B01C3C0566005017BC /* ViewController.swift */; };
-		F716E4B41C3C0566005017BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F716E4B21C3C0566005017BC /* Main.storyboard */; };
+		F716E4B11C3C0566005017BC /* ViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E4B01C3C0566005017BC /* ViewControllerNew.swift */; };
 		F716E4B71C3C0566005017BC /* Scheduler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F716E4B51C3C0566005017BC /* Scheduler.xcdatamodeld */; };
 		F716E4B91C3C0566005017BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F716E4B81C3C0566005017BC /* Assets.xcassets */; };
 		F716E4BC1C3C0566005017BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F716E4BA1C3C0566005017BC /* LaunchScreen.storyboard */; };
 		F716E4C71C3C0566005017BC /* SchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E4C61C3C0566005017BC /* SchedulerTests.swift */; };
 		F716E4D21C3C0566005017BC /* SchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E4D11C3C0566005017BC /* SchedulerUITests.swift */; };
+		F716E4E21C3D6312005017BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F716E4E11C3D6312005017BC /* Main.storyboard */; };
+		F716E5091C3D6A72005017BC /* FadingAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E5081C3D6A72005017BC /* FadingAnimations.swift */; };
+		F716E50C1C3D6B29005017BC /* SchedulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E50B1C3D6B29005017BC /* SchedulerViewController.swift */; };
+		F716E50E1C3D6B65005017BC /* EditScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E50D1C3D6B65005017BC /* EditScheduleViewController.swift */; };
+		F716E5101C3D6B7D005017BC /* NetClassroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E50F1C3D6B7D005017BC /* NetClassroomViewController.swift */; };
+		F716E5121C3D6B8D005017BC /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E5111C3D6B8D005017BC /* HaikuViewController.swift */; };
+		F716E5141C3D6BA2005017BC /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E5131C3D6BA2005017BC /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +47,7 @@
 		8B0CA5C9442DAAE447B1E08E /* Pods_Scheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F716E4AB1C3C0566005017BC /* Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F716E4AE1C3C0566005017BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F716E4B01C3C0566005017BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F716E4B31C3C0566005017BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F716E4B01C3C0566005017BC /* ViewControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNew.swift; sourceTree = "<group>"; };
 		F716E4B61C3C0566005017BC /* Scheduler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scheduler.xcdatamodel; sourceTree = "<group>"; };
 		F716E4B81C3C0566005017BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F716E4BB1C3C0566005017BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +58,13 @@
 		F716E4CD1C3C0566005017BC /* SchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F716E4D11C3C0566005017BC /* SchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerUITests.swift; sourceTree = "<group>"; };
 		F716E4D31C3C0566005017BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F716E4E11C3D6312005017BC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F716E5081C3D6A72005017BC /* FadingAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadingAnimations.swift; sourceTree = "<group>"; };
+		F716E50B1C3D6B29005017BC /* SchedulerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulerViewController.swift; sourceTree = "<group>"; };
+		F716E50D1C3D6B65005017BC /* EditScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditScheduleViewController.swift; sourceTree = "<group>"; };
+		F716E50F1C3D6B7D005017BC /* NetClassroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetClassroomViewController.swift; sourceTree = "<group>"; };
+		F716E5111C3D6B8D005017BC /* HaikuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuViewController.swift; sourceTree = "<group>"; };
+		F716E5131C3D6BA2005017BC /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				F716E4AE1C3C0566005017BC /* AppDelegate.swift */,
-				F716E4B01C3C0566005017BC /* ViewController.swift */,
-				F716E4B21C3C0566005017BC /* Main.storyboard */,
+				F716E50A1C3D6AEE005017BC /* ViewControllers */,
 				F716E4B81C3C0566005017BC /* Assets.xcassets */,
+				F716E4E11C3D6312005017BC /* Main.storyboard */,
 				F716E4BA1C3C0566005017BC /* LaunchScreen.storyboard */,
+				F716E5071C3D6A5B005017BC /* My Frameworks */,
 				F716E4BD1C3C0566005017BC /* Info.plist */,
 				F716E4B51C3C0566005017BC /* Scheduler.xcdatamodeld */,
 			);
@@ -150,6 +163,27 @@
 				F716E4D31C3C0566005017BC /* Info.plist */,
 			);
 			path = SchedulerUITests;
+			sourceTree = "<group>";
+		};
+		F716E5071C3D6A5B005017BC /* My Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F716E5081C3D6A72005017BC /* FadingAnimations.swift */,
+			);
+			name = "My Frameworks";
+			sourceTree = "<group>";
+		};
+		F716E50A1C3D6AEE005017BC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F716E4B01C3C0566005017BC /* ViewControllerNew.swift */,
+				F716E50B1C3D6B29005017BC /* SchedulerViewController.swift */,
+				F716E50D1C3D6B65005017BC /* EditScheduleViewController.swift */,
+				F716E50F1C3D6B7D005017BC /* NetClassroomViewController.swift */,
+				F716E5111C3D6B8D005017BC /* HaikuViewController.swift */,
+				F716E5131C3D6BA2005017BC /* WeatherViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +293,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F716E4E21C3D6312005017BC /* Main.storyboard in Resources */,
 				F716E4BC1C3C0566005017BC /* LaunchScreen.storyboard in Resources */,
 				F716E4B91C3C0566005017BC /* Assets.xcassets in Resources */,
-				F716E4B41C3C0566005017BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,8 +368,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F716E4B11C3C0566005017BC /* ViewController.swift in Sources */,
+				F716E4B11C3C0566005017BC /* ViewControllerNew.swift in Sources */,
+				F716E5141C3D6BA2005017BC /* WeatherViewController.swift in Sources */,
+				F716E5091C3D6A72005017BC /* FadingAnimations.swift in Sources */,
 				F716E4B71C3C0566005017BC /* Scheduler.xcdatamodeld in Sources */,
+				F716E50C1C3D6B29005017BC /* SchedulerViewController.swift in Sources */,
+				F716E5101C3D6B7D005017BC /* NetClassroomViewController.swift in Sources */,
+				F716E5121C3D6B8D005017BC /* HaikuViewController.swift in Sources */,
+				F716E50E1C3D6B65005017BC /* EditScheduleViewController.swift in Sources */,
 				F716E4AF1C3C0566005017BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,14 +412,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F716E4B21C3C0566005017BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F716E4B31C3C0566005017BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F716E4BA1C3C0566005017BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
