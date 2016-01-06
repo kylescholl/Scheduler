@@ -37,7 +37,8 @@ class WeatherViewController: UIViewController {
 			print(swiftyJsonVar)
 		//}
 		
-			let json = JSON(responseObject)
+			/*	let json = JSON(responseObject)  */
+			let json = swiftyJsonVar
 			if let forecast = json["list"][0]["weather"][0]["description"].string {
 				self.weatherLabel.text = forecast
 			}
@@ -108,24 +109,10 @@ class WeatherViewController: UIViewController {
 		}
 	
 		
-		
-		let _manager = AFHTTPSessionManager()
-		_manager.GET(
-			"http://api.openweathermap.org/data/2.5/forecast/daily?q=Philadelphia&mode=json&units=imperial&cnt=1&appid=a4ffa36a8b7e03ea5f1796cf8124b38e",
-			parameters: nil,
-			
-			success: { (operation: AFHTTPRequestOperation?, responseObject: AnyObject!) in
-				print("Response: " + responseObject.description)
-				
-				let json = JSON(responseObject)
-				if let forecast = json["list"][0]["main"][0]["temp"].string {
-					self._weatherLabel.text = forecast
-				}
-			},
-			failure: { (operation: AFHTTPRequestOperation?, error: NSError!) in
-				print("Error: " + error.localizedDescription)
-				self._weatherLabel.text = "error"
-		})
+		Alamofire.request(.GET, "http://api.openweathermap.org/data/2.5/forecast/daily?q=Philadelphia&mode=json&units=imperial&cnt=1&appid=a4ffa36a8b7e03ea5f1796cf8124b38e").responseJSON { (responseData) -> Void in
+			let swiftyJsonVar = JSON(responseData.result.value!)
+			print(swiftyJsonVar)
+		}
 	}
 	
 	@IBAction func done(sender: AnyObject) {

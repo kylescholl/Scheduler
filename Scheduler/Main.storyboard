@@ -2652,7 +2652,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="CXF-xA-RrI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXF-xA-RrI">
                                 <rect key="frame" x="112" y="104" width="150" height="150"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-7N-KSu">
@@ -2908,7 +2908,4 @@
             <point key="canvasLocation" x="-1352.5" y="1483.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Sun" width="591" height="590"/>
-    </resources>
 </document>
