@@ -14,6 +14,7 @@ class ViewControllerNew: UIViewController {
 	@IBOutlet var netClassroomButton: UIButton!
 	@IBOutlet var showHaikuButton:    UIButton!
 	@IBOutlet var weatherButton:      UIButton!
+	@IBOutlet var helpButton:         UIButton!
 	
 	@IBOutlet var orangeButton:   UIButton!
 	@IBOutlet var carrotButton:   UIButton!
@@ -32,11 +33,13 @@ class ViewControllerNew: UIViewController {
 		let netClassroom = netClassroomButton
 		let haiku        = showHaikuButton
 		let weather      = weatherButton
+		let help         = helpButton
 		
 		schedule.layer.cornerRadius     = 10.0
 		netClassroom.layer.cornerRadius = 10.0
 		haiku.layer.cornerRadius        = 10.0
 		weather.layer.cornerRadius      = 10.0
+		help.layer.cornerRadius         = 10.0
 		
 		schedule.setTitle      ("Schedule",     forState: UIControlState.Normal)
 		netClassroom.setTitle  ("NetClassroom", forState: UIControlState.Normal)
@@ -146,7 +149,7 @@ class ViewControllerNew: UIViewController {
 	
 	@IBAction func helpButton(sender: UIButton) {
 		NSLog("HelpButtonPressed")
-		helpView.fadeIn(duration: 1.0)
+		helpView.fadeIn(duration: 0.5)
 	}
 	
 	@IBAction func showScheduleButtonPressed(sender: UIButton) {
@@ -191,11 +194,69 @@ class ViewControllerNew: UIViewController {
 		
 		//self.view.backgroundColor = UIColor.wetAsphaltColor()
 		setButtonStyles()
+		experimentalCustomization()
 	}
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
+	}
+	
+	
+	@IBAction func clicked(sender: AnyObject) {
+		
+		/*
+		showHaikuButton = sender as! UIButton
+		
+		UIView.animateWithDuration(1.0, animations:{
+			self.showHaikuButton.frame = CGRectMake(
+				self.showHaikuButton.frame.origin.x + 25,
+				self.showHaikuButton.frame.origin.y + 25,
+				self.showHaikuButton.frame.size.width,
+				self.showHaikuButton.frame.size.height
+			)
+		})
+		*/
+		
+		let button = sender as! UIButton
+		
+		UIView.animateWithDuration(1.0, animations:{
+			button.frame = CGRectMake(
+				button.frame.origin.x + 25,
+				button.frame.origin.y + 25,
+				button.frame.size.width,
+				button.frame.size.height
+			)
+		})
+	}
+	
+	
+	/*  Experimental customization  */
+	
+	func experimentalCustomization() {
+		
+		//let schedule     = showScheduleButton
+		//let netClassroom = netClassroomButton
+		let haiku        = showHaikuButton
+		//let weather      = weatherButton
+		//let help         = helpButton
+		
+		haiku.backgroundColor     = UIColor.turquoiseColor()
+		
+		haiku.layer.shadowColor  = UIColor.greenSeaColor().CGColor
+		//haiku.layer.shadowColor   = UIColor.wetAsphaltColor().CGColor
+		//haiku.layer.shadowColor   = UIColor.cloudsColor().CGColor
+		
+		haiku.layer.shadowOffset  = CGSize(width: 0.0, height: 5.0)
+		haiku.layer.shadowRadius  = 5.0 /* 3.0 */
+		haiku.layer.shadowOpacity = 0.7
+		
+		//haiku.layer.cornerRadius  = 6.0
+		
+		haiku.titleLabel!.font    = UIFont(name: "boldFlatFontOfSize", size: 16)
+		haiku.setTitleColor(UIColor.cloudsColor(), forState: .Normal)
+		haiku.setTitleColor(UIColor.cloudsColor(), forState: .Highlighted)
+		
 	}
 }
 

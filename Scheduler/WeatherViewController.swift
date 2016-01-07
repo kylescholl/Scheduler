@@ -32,7 +32,7 @@ class WeatherViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		Alamofire.request(.GET, "http://api.androidhive.info/contacts/").responseJSON { (responseData) -> Void in
+		Alamofire.request(.GET, "http://api.openweathermap.org/data/2.5/forecast/daily?q=Philadelphia&mode=json&units=imperial&cnt=1&appid=a4ffa36a8b7e03ea5f1796cf8124b38e").responseJSON { (responseData) -> Void in
 			let swiftyJsonVar = JSON(responseData.result.value!)
 			print(swiftyJsonVar)
 		//}
@@ -43,9 +43,11 @@ class WeatherViewController: UIViewController {
 				self.weatherLabel.text = forecast
 			}
 			
+			// Add ["temp"]
 			if let forecastType = json["list"][0]["weather"][0]["id"].string {
 				
 				let forecastID : Int = Int(forecastType)!
+				print(forecastID)
 				switch forecastID {
 				case 200...232:
 					print("Thunderstorm")
@@ -106,12 +108,6 @@ class WeatherViewController: UIViewController {
 					self.currentWeatherIcon.image = UIImage(named: "Cloud")
 				}
 			}
-		}
-	
-		
-		Alamofire.request(.GET, "http://api.openweathermap.org/data/2.5/forecast/daily?q=Philadelphia&mode=json&units=imperial&cnt=1&appid=a4ffa36a8b7e03ea5f1796cf8124b38e").responseJSON { (responseData) -> Void in
-			let swiftyJsonVar = JSON(responseData.result.value!)
-			print(swiftyJsonVar)
 		}
 	}
 	
