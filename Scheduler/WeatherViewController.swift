@@ -7,9 +7,6 @@
 //
 
 import UIKit
-
-/*  "Cannot load underlying module for \(these frameworks)"  */
-// import SwiftDate
 import SwiftyJSON
 import Alamofire
 
@@ -28,18 +25,47 @@ class WeatherViewController: UIViewController {
 	@IBOutlet var currentWeatherIcon: UIImageView!
 	@IBOutlet var staticWeatherIcon: UIImageView!
 	
+	@IBOutlet var activityIndicator: UIActivityIndicatorView!
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.weatherLabel.text = ""
+		
+		activityIndicator("on")
+		callWeatherService()
+		
+		
+	}
+	
+	func activityIndicator(callMethod: String) {
+		if (callMethod == "on") {
+			
+			print("activity indicator should be off")
+			view.addSubview(activityIndicator)
+			activityIndicator.center = view.center
+			activityIndicator.startAnimating()
+			
+		} else if(callMethod == "off") {
+			print("activity indicator should be off")
+			activityIndicator.removeFromSuperview()
+		}
+	}
+	
+	func callWeatherService() {
+		
 		Alamofire.request(.GET, "http://api.openweathermap.org/data/2.5/forecast/daily?q=Philadelphia&mode=json&units=imperial&cnt=1&appid=a4ffa36a8b7e03ea5f1796cf8124b38e").responseJSON { (responseData) -> Void in
+			
 			let swiftyJsonVar = JSON(responseData.result.value!)
 			print(swiftyJsonVar)
-		//}
-		
-			/*	let json = JSON(responseObject)  */
+			
 			let json = swiftyJsonVar
+			
 			if let forecast = json["list"][0]["weather"][0]["description"].string {
+				
+				self.activityIndicator("off")
+				
 				self.weatherLabel.text = forecast
 			}
 			

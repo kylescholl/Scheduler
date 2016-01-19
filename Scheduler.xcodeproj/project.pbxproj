@@ -22,6 +22,7 @@
 		F716E5101C3D6B7D005017BC /* NetClassroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E50F1C3D6B7D005017BC /* NetClassroomViewController.swift */; };
 		F716E5121C3D6B8D005017BC /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E5111C3D6B8D005017BC /* HaikuViewController.swift */; };
 		F716E5141C3D6BA2005017BC /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E5131C3D6BA2005017BC /* WeatherViewController.swift */; };
+		F716E5161C3F5713005017BC /* Custom UIButton Touch Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716E5151C3F5713005017BC /* Custom UIButton Touch Detection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		F716E50F1C3D6B7D005017BC /* NetClassroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetClassroomViewController.swift; sourceTree = "<group>"; };
 		F716E5111C3D6B8D005017BC /* HaikuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuViewController.swift; sourceTree = "<group>"; };
 		F716E5131C3D6BA2005017BC /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		F716E5151C3F5713005017BC /* Custom UIButton Touch Detection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom UIButton Touch Detection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				F716E50A1C3D6AEE005017BC /* ViewControllers */,
 				F716E4B81C3C0566005017BC /* Assets.xcassets */,
 				F716E4E11C3D6312005017BC /* Main.storyboard */,
+				F716E5151C3F5713005017BC /* Custom UIButton Touch Detection.swift */,
 				F716E4BA1C3C0566005017BC /* LaunchScreen.storyboard */,
 				F716E5071C3D6A5B005017BC /* My Frameworks */,
 				F716E4BD1C3C0566005017BC /* Info.plist */,
@@ -371,6 +374,7 @@
 				F716E4B11C3C0566005017BC /* ViewControllerNew.swift in Sources */,
 				F716E5141C3D6BA2005017BC /* WeatherViewController.swift in Sources */,
 				F716E5091C3D6A72005017BC /* FadingAnimations.swift in Sources */,
+				F716E5161C3F5713005017BC /* Custom UIButton Touch Detection.swift in Sources */,
 				F716E4B71C3C0566005017BC /* Scheduler.xcdatamodeld in Sources */,
 				F716E50C1C3D6B29005017BC /* SchedulerViewController.swift in Sources */,
 				F716E5101C3D6B7D005017BC /* NetClassroomViewController.swift in Sources */,
