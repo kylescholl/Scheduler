@@ -15,21 +15,21 @@ class ViewControllerNew: UIViewController {
 	
 	@IBOutlet var showScheduleButton: UIButton!
 	@IBOutlet var netClassroomButton: UIButton!
-	// FIXME: If I'm gonna subclass the haiku button, I think I have to programmatically create it
-	//	@IBOutlet var showHaikuButton:    FUIButton!
 	@IBOutlet var showHaikuButton:    UIButton!
 	@IBOutlet var weatherButton:      UIButton!
 	@IBOutlet var helpButton:         UIButton!
 	
-	@IBOutlet var orangeButton:   UIButton!
-	@IBOutlet var carrotButton:   UIButton!
-	@IBOutlet var pumpkinButton:  UIButton!
-	@IBOutlet var greenSeaButton: UIButton!
+	@IBOutlet var orangeButton:       UIButton!
+	@IBOutlet var carrotButton:       UIButton!
+	@IBOutlet var pumpkinButton:      UIButton!
+	@IBOutlet var greenSeaButton:     UIButton!
 	
-	@IBOutlet var timeLabel: UILabel!
-	@IBOutlet var dateLabel: UILabel!
 	
-	@IBOutlet var helpView: UIView!
+	@IBOutlet var timeLabel:          UILabel!
+	@IBOutlet var dateLabel:          UILabel!
+	
+	
+	@IBOutlet var helpView:           UIView!
 	
 	
 	
