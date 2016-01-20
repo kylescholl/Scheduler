@@ -17,6 +17,7 @@ class ViewControllerNew: UIViewController {
 	@IBOutlet var netClassroomButton: UIButton!
 	@IBOutlet var showHaikuButton:    UIButton!
 	@IBOutlet var weatherButton:      UIButton!
+	@IBOutlet var themeButton:        UIButton!
 	@IBOutlet var helpButton:         UIButton!
 	
 	@IBOutlet var orangeButton:       UIButton!
@@ -56,10 +57,16 @@ class ViewControllerNew: UIViewController {
 		self.performSegueWithIdentifier("HaikuSegue", sender: self)
 	}
 	
+	override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+		if (segue.identifier == "HelpButtonPressed") {
+			var vc = segue!.destinationViewController as secondViewController;
+			
+			vc.backColor = themeColor(bColor)
+			vc.textColor = themeColor(tColor)
+		}
+	}
 	
-	
-	// MARK: - View Setup
-	
+	// MARK: - Initial Setup
 	func dismissView() {
 		//	view.endEditing(true)
 		helpView.fadeOut(duration: 1.0)
@@ -92,10 +99,14 @@ class ViewControllerNew: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	
+	@IBAction func themeButton(sender: AnyObject) {
+		// toggle between light and dark
+		//// flip between cloudsColor() and wetAsphaltColor()
+		
+	}
 	
 	
 	// MARK: - Additional Configuration
-	
 	func setupButtons() {
 		
 		let schedule     = showScheduleButton
@@ -107,7 +118,7 @@ class ViewControllerNew: UIViewController {
 		// Corner Radius
 		schedule.layer.cornerRadius     = 10.0
 		netClassroom.layer.cornerRadius = 10.0
-		//haiku.layer.cornerRadius        = 10.0
+		haiku.layer.cornerRadius        = 10.0
 		weather.layer.cornerRadius      = 10.0
 		help.layer.cornerRadius         = 10.0
 		
@@ -123,13 +134,13 @@ class ViewControllerNew: UIViewController {
 		haiku.titleLabel!.font         = UIFont.boldFlatFontOfSize(16.0)
 		weather.titleLabel!.font       = UIFont.boldFlatFontOfSize(16.0)
 		
+		// Color Setup
+		schedule.backgroundColor  = UIColor.carrotColor()
 		
-		//		haiku.buttonColor     = UIColor.turquoiseColor()
+		haiku.backgroundColor     = UIColor.turquoiseColor()
 		
-		// Button Shadows
-		//		haiku.shadowColor   = UIColor.greenSeaColor()
-		//		haiku.shadowHeight  = 3.0
 		
+		/*
 		haiku.layer.shadowOffset  = CGSize(width: 2.0, height: 2.0)
 		haiku.layer.shadowRadius  = 1.0 /* 3.0 */
 		haiku.layer.shadowOpacity = 0.0
@@ -137,7 +148,7 @@ class ViewControllerNew: UIViewController {
 		haiku.layer.masksToBounds = true
 		
 		//		haiku.cornerRadius  = 6.0
-		
+		*/
 		
 		
 		haiku.setTitleColor(UIColor.cloudsColor(), forState: .Normal)

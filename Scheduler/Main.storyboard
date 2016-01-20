@@ -2425,12 +2425,6 @@
                                     <action selector="netClassroomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3pC-ld-S9M"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyo-3f-uiM">
-                                <rect key="frame" x="20" y="158" width="335" height="71"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="75"/>
-                                <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPe-7o-eKU">
                                 <rect key="frame" x="20" y="229" width="335" height="28"/>
                                 <constraints>
@@ -2480,6 +2474,15 @@
                                     <segue destination="q5Q-ug-3wk" kind="presentation" identifier="HaikuSegue" modalTransitionStyle="crossDissolve" id="pIf-mB-rvO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-hh-H7B">
+                                <rect key="frame" x="310" y="84" width="45" height="45"/>
+                                <state key="normal" title="Light">
+                                    <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="themeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZdV-mp-mgW"/>
+                                </connections>
+                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O58-HQ-Hxb">
                                 <rect key="frame" x="0.0" y="296" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.49411764705882355" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
@@ -2501,6 +2504,12 @@
                                     <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyo-3f-uiM">
+                                <rect key="frame" x="20" y="158" width="335" height="71"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="75"/>
+                                <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -2551,6 +2560,7 @@
                         <outlet property="pumpkinButton" destination="fog-il-2Tr" id="vq4-hJ-XHD"/>
                         <outlet property="showHaikuButton" destination="trb-8M-Ddc" id="Xck-ut-E08"/>
                         <outlet property="showScheduleButton" destination="c7k-Xb-kZa" id="Qc1-zJ-NhN"/>
+                        <outlet property="themeButton" destination="k8a-hh-H7B" id="FKu-X3-ta8"/>
                         <outlet property="timeLabel" destination="Uyo-3f-uiM" id="pkg-hi-icX"/>
                         <outlet property="weatherButton" destination="77L-Cn-hEs" id="yzG-2t-cZS"/>
                         <segue destination="HL8-0w-b1D" kind="presentation" identifier="SchedulerSegue" modalTransitionStyle="crossDissolve" id="iu1-6C-e6w"/>
