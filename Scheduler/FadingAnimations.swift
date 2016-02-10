@@ -6,7 +6,6 @@
 //  Copyright © 2015 Patronus LLC. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public extension UIView {

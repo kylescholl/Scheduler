@@ -19,9 +19,6 @@ target 'Scheduler' do
 	
 	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 	pod 'SwiftDate'
-	
-	# pod 'SwiftSpinner'
-	pod 'SVProgressHUD', :head
 end
 
 target 'SchedulerTests' do

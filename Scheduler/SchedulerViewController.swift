@@ -9,7 +9,13 @@
 import UIKit
 import FlatUIKit
 
+// TODO: Investigate possibility of using a view instead of a viewController for schedule editting
+// MARK: -
+
 class SchedulerViewController: UIViewController, EditScheduleViewControllerDelegate {
+	
+	//var backColor: UIColor
+	//var textColor: UIColor
 	
 	func controller(controller: EditScheduleViewController, aBlockItem: String, bBlockItem: String, cBlockItem: String, dBlockItem: String, eBlockItem: String, fBlockItem: String, gBlockItem: String) {
 		

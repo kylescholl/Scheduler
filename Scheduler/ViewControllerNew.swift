@@ -39,13 +39,15 @@ class ViewControllerNew: UIViewController {
 	
 	@IBAction func helpButton(sender: AnyObject) {
 		NSLog("HelpButtonPressed")
-		helpView.fadeIn(duration: 0.5)
+		helpView.fadeIn(duration: 0.25)
 	}
 	
+	///*
 	@IBAction func showScheduleButtonPressed(sender: AnyObject) {
 		NSLog("showScheduleButtonPressed")
 		self.performSegueWithIdentifier("SchedulerSegue", sender: self)
 	}
+	//*/
 	
 	@IBAction func netClassroomButton(sender: AnyObject) {
 		NSLog("netClassroomButton")
@@ -57,19 +59,20 @@ class ViewControllerNew: UIViewController {
 		self.performSegueWithIdentifier("HaikuSegue", sender: self)
 	}
 	
+/*
 	override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-		if (segue.identifier == "HelpButtonPressed") {
-			var vc = segue!.destinationViewController as secondViewController;
+		if (segue.identifier == "SchedulerSegue") {
+			var vc = (segue!.destinationViewController as secondViewController)
 			
 			vc.backColor = themeColor(bColor)
 			vc.textColor = themeColor(tColor)
 		}
 	}
+*/
 	
 	// MARK: - Initial Setup
 	func dismissView() {
-		//	view.endEditing(true)
-		helpView.fadeOut(duration: 1.0)
+		helpView.fadeOut(duration: 0.25)
 	}
 	
 	override func viewDidLoad() {
@@ -105,6 +108,18 @@ class ViewControllerNew: UIViewController {
 		
 	}
 	
+	func toggleTheme(theme: String) {
+		if theme == "light" {
+			print("light")
+			
+		}
+		if theme == "dark" {
+			print("dark")
+			
+		}
+		print("neither light or dark")
+	}
+	
 	
 	// MARK: - Additional Configuration
 	func setupButtons() {
@@ -114,6 +129,13 @@ class ViewControllerNew: UIViewController {
 		let haiku        = showHaikuButton
 		let weather      = weatherButton
 		let help         = helpButton
+		
+		//	let device = UIDevice.currentDevice().batteryState
+		let device = UIDevice.currentDevice()
+		print("")
+		print(device)
+		print("")
+		//	if device >
 		
 		// Corner Radius
 		schedule.layer.cornerRadius     = 10.0
@@ -127,12 +149,14 @@ class ViewControllerNew: UIViewController {
 		netClassroom.setTitle  ("NetClassroom", forState: UIControlState.Normal)
 		haiku.setTitle         ("Haiku",        forState: UIControlState.Normal)
 		weather.setTitle       ("Weather",      forState: UIControlState.Normal)
+		help.setTitle          ("Help",         forState: UIControlState.Normal)
 		
 		// Font Setup
 		schedule.titleLabel!.font      = UIFont.boldFlatFontOfSize(16.0)
 		netClassroom.titleLabel!.font  = UIFont.boldFlatFontOfSize(16.0)
 		haiku.titleLabel!.font         = UIFont.boldFlatFontOfSize(16.0)
 		weather.titleLabel!.font       = UIFont.boldFlatFontOfSize(16.0)
+		help.titleLabel!.font          = UIFont.boldFlatFontOfSize(16.0)
 		
 		// Color Setup
 		schedule.backgroundColor  = UIColor.carrotColor()
@@ -154,9 +178,10 @@ class ViewControllerNew: UIViewController {
 		haiku.setTitleColor(UIColor.cloudsColor(), forState: .Normal)
 		haiku.setTitleColor(UIColor.cloudsColor(), forState: .Highlighted)
 		
-		showHaikuButton.addTarget(self, action: "touchyTouchy", forControlEvents: .TouchDown)
+		//	showHaikuButton.addTarget(self, action: "touchyTouchy", forControlEvents: .TouchDown)
 	}
 	
+/*
 	func touchyTouchy() {
 		print("touchyTouchy()")
 		
@@ -167,6 +192,7 @@ class ViewControllerNew: UIViewController {
 		haiku.layer.shadowOpacity  = 0.8
 		haiku.layer.masksToBounds  = false
 	}
+*/
 	
 	
 	// MARK: Date & Time
@@ -235,7 +261,6 @@ class ViewControllerNew: UIViewController {
 			NSLog("Error")
 		}
 		
-		print("Hour: \(hour)")
 		var newHour: Int = 0
 		switch hour {
 		case 13:
@@ -269,11 +294,31 @@ class ViewControllerNew: UIViewController {
 		if (hour < 13) {
 			print("hour: \(hour)")
 			print("newHour: \(newHour)")
-			timeLabel.text = ("\(hour):\(minute)")
+			if (minute < 10) {
+				print(minute)
+				timeLabel.text = ("\(hour):0\(minute)")
+			} else if (minute > 10) {
+				print(minute)
+				timeLabel.text = ("\(hour):\(minute)")
+			} else {
+				print(minute)
+				NSLog("Error")
+			}
 		} else if (hour > 13) {
 			print("hour: \(hour)")
 			print("newHour: \(newHour)")
-			timeLabel.text = ("\(newHour):\(minute)")
+			if (minute < 10) {
+				print(minute)
+				timeLabel.text = ("\(newHour):0\(minute)")
+			} else if (minute > 10) {
+				print(minute)
+				timeLabel.text = ("\(newHour):\(minute)")
+			} else {
+				print(minute)
+				NSLog("Error")
+			}
+		} else {
+			NSLog("Error")
 		}
 		
 		dateLabel.text = ("\(currentWeekday), \(currentMonth) \(day)")
