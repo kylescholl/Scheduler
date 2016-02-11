@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FlatUIKit
 
 // TODO: Investigate possibility of using a view instead of a viewController for schedule editting
 // MARK: -

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FlatUIKit
 
 class ViewControllerNew: UIViewController {
 	
@@ -151,12 +150,14 @@ class ViewControllerNew: UIViewController {
 		weather.setTitle       ("Weather",      forState: UIControlState.Normal)
 		help.setTitle          ("Help",         forState: UIControlState.Normal)
 		
+	/*
 		// Font Setup
 		schedule.titleLabel!.font      = UIFont.boldFlatFontOfSize(16.0)
 		netClassroom.titleLabel!.font  = UIFont.boldFlatFontOfSize(16.0)
 		haiku.titleLabel!.font         = UIFont.boldFlatFontOfSize(16.0)
 		weather.titleLabel!.font       = UIFont.boldFlatFontOfSize(16.0)
 		help.titleLabel!.font          = UIFont.boldFlatFontOfSize(16.0)
+	*/
 		
 		// Color Setup
 		schedule.backgroundColor  = UIColor.carrotColor()
