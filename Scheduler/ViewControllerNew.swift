@@ -162,7 +162,7 @@ class ViewControllerNew: UIViewController {
 		// Color Setup
 		schedule.backgroundColor  = UIColor.carrotColor()
 		
-		haiku.backgroundColor     = UIColor.turquoiseColor()
+		//haiku.backgroundColor     = UIColor.turquoiseColor()
 		
 		haiku.backgroundColor = UIColor.sexyBlue()
 		
