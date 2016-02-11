@@ -163,6 +163,8 @@ class ViewControllerNew: UIViewController {
 		
 		haiku.backgroundColor     = UIColor.turquoiseColor()
 		
+		haiku.backgroundColor = UIColor.sexyBlue()
+		
 		
 		/*
 		haiku.layer.shadowOffset  = CGSize(width: 2.0, height: 2.0)
@@ -175,8 +177,8 @@ class ViewControllerNew: UIViewController {
 		*/
 		
 		
-		haiku.setTitleColor(UIColor.cloudsColor(), forState: .Normal)
-		haiku.setTitleColor(UIColor.cloudsColor(), forState: .Highlighted)
+		//	haiku.setTitleColor(UIColor.cloudsColor(), forState: .Normal)
+		//	haiku.setTitleColor(UIColor.cloudsColor(), forState: .Highlighted)
 		
 		//	showHaikuButton.addTarget(self, action: "touchyTouchy", forControlEvents: .TouchDown)
 	}
