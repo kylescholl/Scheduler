@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIColor{
+	/*
 	class func cloudsColor() -> UIColor{
 		return UIColor(red:0.043, green:0.576 ,blue:0.588 , alpha:1.00)
 	}
@@ -16,6 +17,9 @@ extension UIColor{
 	class func wetAsphaltColor() -> UIColor{
 		return UIColor(red:0.043, green:0.576 ,blue:0.588 , alpha:1.00)
 	}
+	*/
+	
+	
 	/*
 	class func wetAsphaltColor() -> UIColor{
 		return UIColor(red:0.043, green:0.576 ,blue:0.588 , alpha:1.00)
